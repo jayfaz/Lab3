@@ -14,7 +14,7 @@ public class Board {
 	
 	public boolean moveIsValid(int row,int col) {
 		if(row >= 0 && col >= 0 && row < size && col < size) {
-			
+			if(Knight.getRow() )
 		}
 	}
 
