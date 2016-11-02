@@ -1,4 +1,4 @@
-package lab3;
+package lab3_KnightsTour;
 
 public class Knight {
 	private int row;

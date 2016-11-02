@@ -1,4 +1,4 @@
-package lab3;
+package lab3_KnightsTour;
 
 public class MyArrayList implements MyList{
 

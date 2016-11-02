@@ -1,4 +1,4 @@
-package lab3;
+package lab3_KnightsTour;
 import java.awt.Point;
 
 public class Board {
