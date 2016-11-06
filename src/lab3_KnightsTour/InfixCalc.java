@@ -18,9 +18,9 @@ public class InfixCalc {
 			if(characters[i].equals("+") || characters[i].equals("-") || 
 					characters[i].equals("*") || characters[i].equals("/")) {
 				if(!(characters[i+1].equals("(") || characters[i+1].equals(")"))) {
-					postFixForm.add(characters[i+1]);
-					postFixForm.add(characters[i]);
-					i++;
+					postFixForm.add(characters[i+1]); //adds value after operand excludes parentheses
+					postFixForm.add(characters[i]); //adds character
+					i++; //keeps in order
 				} else {
 					storage = characters[i];
 				}

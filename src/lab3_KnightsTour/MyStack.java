@@ -14,7 +14,7 @@ public class MyStack {
 	}
 	
 	public Integer pop() {
-		return list.remove(list.size()-1);
+		return list.remove(list.size()-1); //pops off the top 
 	}
 	
 	public boolean isEmpty() {
