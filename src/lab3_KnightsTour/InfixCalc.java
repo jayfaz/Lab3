@@ -11,7 +11,7 @@ public class InfixCalc {
 	public InfixCalc(String input) {
 		this.input = input;
 		postFixForm = new ArrayList<String>();
-		input = input.replaceAll("(?<=\\d)\\s*([-+/*])\\s*(?=\\d)", " $1 "); // puts in spaces to separate values
+		input = input.replaceAll(".(?!$)", "$0 "); // puts in spaces to separate values
 		characters = input.split("\\s+");
 		
 		for(int i = 0; i < characters.length; i++) {
@@ -27,7 +27,9 @@ public class InfixCalc {
 			} else if(characters[i].equals("(")) {
 				// do nothing
 			} else if(characters[i].equals(")")) {
-				postFixForm.add(storage);
+				if(storage != null) {
+					postFixForm.add(storage);
+				}
 			} else {
 				postFixForm.add(characters[i]);
 			}
@@ -39,6 +41,7 @@ public class InfixCalc {
 		for(int i = 0; i < postFixForm.size(); i++) {
 			output += postFixForm.get(i) + " ";
 		}
+		output = output.substring(4,output.length()); // removes "null"
 	}
 	
 	public String getOutput() {
